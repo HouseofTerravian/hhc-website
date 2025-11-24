@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candlelight Confession™ — Happy Holiday Couples</title>
+    <meta name="description" content="The intimacy ritual every couple should share this holiday season. Reconnect, reveal, and restart with deeper love and honesty.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Epilogue', sans-serif;
+            background: linear-gradient(to bottom, #09090b 0%, #18181b 50%, #09090b 100%);
+            color: #fdfcfa;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* ===== TYPOGRAPHY ===== */
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.2;
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes glow {
+            0%, 100% {
+                opacity: 0.8;
+                filter: blur(20px);
+            }
+            50% {
+                opacity: 1;
+                filter: blur(25px);
+            }
+        }
+        
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.95; }
+        }
+        
+        @keyframes treeGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 15px rgba(202, 138, 4, 0.6));
+            }
+            50% {
+                filter: drop-shadow(0 0 25px rgba(202, 138, 4, 0.8));
+            }
+        }
+        
+        @keyframes ornamentSpin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; opacity: 0; }
+        .delay-200 { animation-delay: 0.2s; opacity: 0; }
+        .delay-300 { animation-delay: 0.3s; opacity: 0; }
+        .delay-400 { animation-delay: 0.4s; opacity: 0; }
+        .delay-500 { animation-delay: 0.5s; opacity: 0; }
+        
+        .glow-effect {
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        .candle-flicker {
+            animation: flicker 4s ease-in-out infinite;
+        }
+        
+        /* ===== GRADIENT TEXT ===== */
+        .gradient-text {
+            background: linear-gradient(135deg, #c9315b 0%, #ca8a04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* ===== LAYOUT UTILITIES ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .container-sm {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            padding: 6rem 1rem;
+            position: relative;
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 1.25rem 2.5rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            text-decoration: none;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #c9315b, #a9234a);
+            color: #fdfcfa;
+            box-shadow: 0 4px 14px rgba(201, 49, 91, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(201, 49, 91, 0.5);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(to right, #ca8a04, #a16207);
+            color: #09090b;
+            box-shadow: 0 4px 14px rgba(202, 138, 4, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(202, 138, 4, 0.5);
+        }
+        
+        .btn-outline {
+            border: 2px solid rgba(202, 138, 4, 0.5);
+            color: #fde047;
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(202, 138, 4, 0.1);
+            border-color: #ca8a04;
+        }
+        
+        /* ===== CARDS ===== */
+        .card {
+            background: rgba(24, 24, 27, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(118, 29, 60, 0.3);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            border-color: rgba(118, 29, 60, 0.5);
+        }
+        
+        .card-feature {
+            background: linear-gradient(135deg, rgba(24, 24, 27, 0.9), rgba(67, 11, 29, 0.2));
+            border: 2px solid rgba(201, 49, 91, 0.4);
+            border-radius: 2rem;
+            padding: 3rem;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 5rem 1rem;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        
+        .glow-orb {
+            position: absolute;
+            width: 24rem;
+            height: 24rem;
+            border-radius: 50%;
+            opacity: 0.2;
+            blur: 60px;
+        }
+        
+        .glow-burgundy {
+            background: #c9315b;
+            top: 25%;
+            left: 25%;
+        }
+        
+        .glow-gold {
+            background: #eab308;
+            bottom: 25%;
+            right: 25%;
+            animation-delay: 1.5s;
+        }
+        
+        /* ===== CHRISTMAS TREE ===== */
+        .christmas-tree {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            animation: treeGlow 3s ease-in-out infinite;
+        }
+        
+        .tree-section {
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 60px solid #2d5016;
+            position: relative;
+            margin: -10px auto;
+        }
+        
+        .tree-section:nth-child(1) {
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 50px solid #3d6b1f;
+        }
+        
+        .tree-section:nth-child(2) {
+            border-left: 45px solid transparent;
+            border-right: 45px solid transparent;
+            border-bottom: 70px solid #2d5016;
+        }
+        
+        .tree-trunk {
+            width: 20px;
+            height: 30px;
+            background: #4a2511;
+            margin: -5px auto 0;
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .tree-star {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fde047;
+            font-size: 1.5rem;
+            animation: treeGlow 2s ease-in-out infinite;
+        }
+        
+        .ornament {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: ornamentSpin 10s linear infinite;
+        }
+        
+        .ornament-red {
+            background: #c9315b;
+            top: 15px;
+            left: 20px;
+        }
+        
+        .ornament-gold {
+            background: #ca8a04;
+            top: 30px;
+            right: 15px;
+            animation-delay: 2s;
+        }
+        
+        .ornament-cream {
+            background: #ebe4d7;
+            bottom: 20px;
+            left: 25px;
+            animation-delay: 4s;
+        }
+        
+        /* Hide tree on mobile */
+        @media (max-width: 768px) {
+            .christmas-tree {
+                display: none;
+            }
+        }
+        
+        /* ===== CANDLES ===== */
+        .candle-container {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-top: 4rem;
+        }
+        
+        .candle {
+            position: relative;
+        }
+        
+        .candle-body {
+            width: 0.5rem;
+            height: 8rem;
+            background: linear-gradient(to top, #bfa481, #dfd2bd);
+            border-radius: 0.25rem;
+        }
+        
+        .candle-flame {
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1.5rem;
+            height: 1.5rem;
+            background: #facc15;
+            border-radius: 50%;
+            filter: blur(4px);
+            opacity: 0.8;
+        }
+        
+        .candle-glow {
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2rem;
+            height: 2rem;
+            background: #fde047;
+            border-radius: 50%;
+            filter: blur(8px);
+            opacity: 0.5;
+        }
+        
+        /* ===== DECORATIVE ELEMENTS ===== */
+        .divider {
+            height: 1px;
+            width: 8rem;
+            background: linear-gradient(to right, transparent, #ca8a04, transparent);
+            margin: 2rem auto;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(118, 29, 60, 0.3);
+            border: 1px solid rgba(169, 35, 74, 0.5);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #fde047;
+        }
+        
+        /* ===== TESTIMONIALS ===== */
+        .testimonial {
+            background: rgba(24, 24, 27, 0.5);
+            border: 1px solid rgba(118, 29, 60, 0.3);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial:hover {
+            border-color: rgba(169, 35, 74, 0.5);
+        }
+        
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .star {
+            color: #fde047;
+            font-size: 1.25rem;
+        }
+        
+        /* ===== GRID LAYOUTS ===== */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #c9315b 0%, #ca8a04 100%);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #a9234a 0%, #a16207 100%);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 1rem;
+            }
+            
+            .btn {
+                width: 100%;
+                padding: 1rem 2rem;
+            }
+            
+            .card-feature {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 3rem !important;
+            }
+            
+            h2 {
+                font-size: 2.5rem !important;
+            }
+        }
+        
+        /* ===== UTILITY CLASSES ===== */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .mb-6 { margin-bottom: 3rem; }
+        .mb-8 { margin-bottom: 4rem; }
+        .mt-2 { margin-top: 1rem; }
+        .mt-4 { margin-top: 2rem; }
+        .mt-6 { margin-top: 3rem; }
+        .mt-8 { margin-top: 4rem; }
+        .p-4 { padding: 2rem; }
+        .p-6 { padding: 3rem; }
+        .relative { position: relative; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .gap-2 { gap: 1rem; }
+        .gap-4 { gap: 2rem; }
+        .gap-6 { gap: 3rem; }
+        
+        /* Color utilities */
+        .text-cream { color: #fdfcfa; }
+        .text-cream-200 { color: #f5f1ea; }
+        .text-cream-300 { color: #ebe4d7; }
+        .text-cream-400 { color: #dfd2bd; }
+        .text-gold { color: #fde047; }
+        .text-burgundy { color: #c9315b; }
+        
+        /* Font weights */
+        .font-light { font-weight: 300; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        
+        /* Text sizes */
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .text-5xl { font-size: 3rem; }
+        .text-6xl { font-size: 3.75rem; }
+        .text-7xl { font-size: 4.5rem; }
+        
+        /* Opacity */
+        .opacity-80 { opacity: 0.8; }
+        
+        /* Border radius */
+        .rounded-full { border-radius: 9999px; }
+        .rounded-xl { border-radius: 1rem; }
+        .rounded-2xl { border-radius: 1.5rem; }
+        
+        /* Shadows */
+        .shadow-xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Christmas Tree (Fixed Position) -->
+    <div class="christmas-tree">
+        <div class="tree-star">★</div>
+        <div style="position: relative;">
+            <div class="tree-section"></div>
+            <div class="ornament ornament-red"></div>
+            <div class="tree-section"></div>
+            <div class="ornament ornament-gold"></div>
+            <div class="tree-section"></div>
+            <div class="ornament ornament-cream"></div>
+            <div class="tree-trunk"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="glow-orb glow-burgundy glow-effect"></div>
+            <div class="glow-orb glow-gold glow-effect"></div>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
+            <div class="text-center">
+                <!-- Decorative Top -->
+                <div class="flex items-center justify-center mb-4 fade-in-up">
+                    <div style="height: 1px; width: 6rem; background: linear-gradient(to right, transparent, #fde047, transparent);"></div>
+                    <div style="margin: 0 1rem; color: #fde047; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase;" class="font-serif">Holiday Ritual</div>
+                    <div style="height: 1px; width: 6rem; background: linear-gradient(to right, transparent, #fde047, transparent);"></div>
+                </div>
+                
+                <h1 class="font-serif font-light text-6xl mb-4 fade-in-up delay-100" style="line-height: 1.1;">
+                    Candlelight<br>
+                    <span class="gradient-text font-semibold" style="font-style: italic;">Confession</span>™
+                </h1>
+                
+                <p class="text-2xl font-light text-cream-200 mb-3 fade-in-up delay-200" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                    The Intimacy Ritual Every Couple Should Share This Holiday Season
+                </p>
+                
+                <p class="text-xl text-cream-300 opacity-80 mb-6 font-light fade-in-up delay-300" style="letter-spacing: 0.02em;">
+                    Reconnect. Reveal. Restart.<br>
+                    <span class="text-base">A guided experience for deeper love, deeper honesty, deeper connection — without therapy.</span>
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col gap-4 items-center mb-8 fade-in-up delay-400" style="margin-top: 3rem;">
+                    <a href="#" data-product="holiday" class="btn btn-primary" style="min-width: 320px;">
+                        Get Candlelight Confession — $39
+                    </a>
+                    
+                    <a href="#" data-product="bundle" class="btn btn-outline" style="min-width: 320px;">
+                        Bundle: Holiday + New Year — $59
+                    </a>
+                </div>
+                
+                <!-- Candles -->
+                <div class="candle-container fade-in-up delay-500">
+                    <div class="candle">
+                        <div class="candle-body candle-flicker"></div>
+                        <div class="candle-flame candle-flicker"></div>
+                        <div class="candle-glow candle-flicker" style="animation-delay: 0.5s;"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="candle-body candle-flicker" style="animation-delay: 0.3s;"></div>
+                        <div class="candle-flame candle-flicker" style="animation-delay: 0.3s;"></div>
+                        <div class="candle-glow candle-flicker" style="animation-delay: 0.8s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Is Section -->
+    <section class="section">
+        <div class="container-sm">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-5xl mb-4 text-cream">
+                    What Is <span class="gradient-text" style="font-style: italic;">Candlelight Confession</span>™?
+                </h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="card-feature">
+                <p class="text-2xl font-light text-cream-200 mb-6" style="line-height: 1.8;">
+                    A short, guided audio intimacy ritual that helps couples:
+                </p>
+                
+                <div class="grid grid-2 mb-6">
+                    <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                        <div style="width: 0.5rem; height: 0.5rem; background: #fde047; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                        <p class="text-lg text-cream-300">Open their hearts</p>
+                    </div>
+                    <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                        <div style="width: 0.5rem; height: 0.5rem; background: #fde047; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                        <p class="text-lg text-cream-300">Speak hidden truths safely</p>
+                    </div>
+                    <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                        <div style="width: 0.5rem; height: 0.5rem; background: #fde047; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                        <p class="text-lg text-cream-300">Feel seen</p>
+                    </div>
+                    <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                        <div style="width: 0.5rem; height: 0.5rem; background: #fde047; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                        <p class="text-lg text-cream-300">Deepen trust</p>
+                    </div>
+                    <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                        <div style="width: 0.5rem; height: 0.5rem; background: #fde047; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                        <p class="text-lg text-cream-300">Feel romance again</p>
+                    </div>
+                    <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                        <div style="width: 0.5rem; height: 0.5rem; background: #fde047; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                        <p class="text-lg text-cream-300">Reset emotional connection</p>
+                    </div>
+                    <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                        <div style="width: 0.5rem; height: 0.5rem; background: #fde047; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                        <p class="text-lg text-cream-300">Heal resentments</p>
+                    </div>
+                    <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                        <div style="width: 0.5rem; height: 0.5rem; background: #fde047; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                        <p class="text-lg text-cream-300">Increase emotional closeness</p>
+                    </div>
+                </div>
+                
+                <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 2.5rem; margin-top: 2.5rem;">
+                    <h3 class="font-serif text-3xl mb-4 text-gold">What's Inside:</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="flex" style="align-items: flex-start; gap: 0.75rem;">
+                            <span class="text-gold">•</span>
+                            <span class="text-lg text-cream-300"><strong class="text-cream-200">24-minute immersive ritual</strong> with soft guidance</span>
+                        </div>
+                        <div class="flex" style="align-items: flex-start; gap: 0.75rem;">
+                            <span class="text-gold">•</span>
+                            <span class="text-lg text-cream-300"><strong class="text-cream-200">Emotional safety structure</strong> for vulnerability without triggering</span>
+                        </div>
+                        <div class="flex" style="align-items: flex-start; gap: 0.75rem;">
+                            <span class="text-gold">•</span>
+                            <span class="text-lg text-cream-300"><strong class="text-cream-200">Holiday-themed intimacy prompts</strong></span>
+                        </div>
+                        <div class="flex" style="align-items: flex-start; gap: 0.75rem;">
+                            <span class="text-gold">•</span>
+                            <span class="text-lg text-cream-300"><strong class="text-cream-200">Breathwork + grounding</strong> techniques</span>
+                        </div>
+                        <div class="flex" style="align-items: flex-start; gap: 0.75rem;">
+                            <span class="text-gold">•</span>
+                            <span class="text-lg text-cream-300"><strong class="text-cream-200">Connection affirmations</strong></span>
+                        </div>
+                        <div class="flex" style="align-items: flex-start; gap: 0.75rem;">
+                            <span class="text-gold">•</span>
+                            <span class="text-lg text-cream-300"><strong class="text-cream-200">"Truth-telling without triggering"</strong> sequence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Holiday Edition -->
+    <section id="holiday-edition" class="section" style="background: linear-gradient(to bottom, rgba(67, 11, 29, 0.2), transparent);">
+        <div class="container-sm">
+            <div class="text-center mb-6">
+                <span class="badge">Primary Offering</span>
+                <h2 class="font-serif text-5xl mt-4 mb-2 text-cream">
+                    The Holiday Edition
+                </h2>
+            </div>
+            
+            <div class="card-feature">
+                <div class="flex flex-col gap-4 mb-6" style="align-items: center;">
+                    <div>
+                        <div class="text-6xl font-serif gradient-text mb-2">$39</div>
+                        <div class="text-cream-400 text-lg">Format: Audio Ritual + PDF</div>
+                        <div class="text-cream-400 text-lg">Duration: 24 minutes</div>
+                    </div>
+                    <a href="#" data-product="holiday" class="btn btn-primary" style="width: 100%; max-width: 400px;">
+                        Get the Holiday Edition
+                    </a>
+                </div>
+                
+                <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 2.5rem; margin-top: 2.5rem;">
+                    <h3 class="font-serif text-3xl mb-4 text-gold">This Edition Includes:</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="card" style="padding: 1.5rem;">
+                            <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                                <div style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #ca8a04); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">1</div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-cream mb-1">Christmas Candlelight Ritual</h4>
+                                    <p class="text-cream-400">The core guided intimacy experience designed for holiday reconnection</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="padding: 1.5rem;">
+                            <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                                <div style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #ca8a04); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">2</div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-cream mb-1">The Holiday Healing Dialogue</h4>
+                                    <p class="text-cream-400">Structured conversation prompts for addressing holiday stress together</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="padding: 1.5rem;">
+                            <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                                <div style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #ca8a04); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">3</div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-cream mb-1">The "I Miss You, I Choose You" Closing Ritual</h4>
+                                    <p class="text-cream-400">Powerful affirmation sequence to seal your reconnection</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="padding: 1.5rem;">
+                            <div class="flex" style="align-items: flex-start; gap: 1rem;">
+                                <div style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #ca8a04); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">4</div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-cream mb-1">Relationship Reconnection Checklist</h4>
+                                    <p class="text-cream-400">Practical PDF guide for maintaining intimacy through the holiday season</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Year Edition -->
+    <section id="new-year-edition" class="section">
+        <div class="container-sm">
+            <div class="text-center mb-6">
+                <span class="badge" style="background: rgba(202, 138, 4, 0.2); border-color: rgba(202, 138, 4, 0.5);">Start Fresh Together</span>
+                <h2 class="font-serif text-5xl mt-4 mb-3 text-cream" style="line-height: 1.2;">
+                    Start the New Year Together
+                </h2>
+                <p class="text-2xl font-light text-cream-300" style="font-style: italic;">
+                    On the Same Page, In the Same Heart
+                </p>
+            </div>
+            
+            <div class="card-feature" style="border-color: rgba(202, 138, 4, 0.4);">
+                <p class="text-xl text-cream-300 mb-6" style="line-height: 1.8;">
+                    A deeper, future-focused ritual designed for couples to align on hopes, visions, needs, desires, and relationship intentions for the year ahead.
+                </p>
+                
+                <div class="flex flex-col gap-4 mb-6" style="align-items: center;">
+                    <div>
+                        <div class="text-6xl font-serif gradient-text mb-2">$29</div>
+                        <div class="text-cream-400 text-lg">Or included in $59 bundle</div>
+                    </div>
+                    <a href="#" data-product="newyear" class="btn btn-secondary" style="width: 100%; max-width: 400px;">
+                        Get New Year Edition
+                    </a>
+                </div>
+                
+                <div style="border-top: 1px solid rgba(202, 138, 4, 0.3); padding-top: 2.5rem; margin-top: 2.5rem;">
+                    <h3 class="font-serif text-3xl mb-4 text-gold">This Edition Includes:</h3>
+                    <div class="grid grid-2">
+                        <div class="card" style="border-color: rgba(202, 138, 4, 0.3);">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: linear-gradient(135deg, #ca8a04, #a16207); display: flex; align-items: center; justify-content: center; color: #09090b; font-weight: bold; font-size: 1.25rem; margin-bottom: 1rem;">✦</div>
+                            <h4 class="text-xl font-semibold text-cream mb-2">New Year Alignment Ritual</h4>
+                            <p class="text-cream-400">Guided conversation to synchronize your visions for the future</p>
+                        </div>
+                        
+                        <div class="card" style="border-color: rgba(202, 138, 4, 0.3);">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: linear-gradient(135deg, #ca8a04, #a16207); display: flex; align-items: center; justify-content: center; color: #09090b; font-weight: bold; font-size: 1.25rem; margin-bottom: 1rem;">✦</div>
+                            <h4 class="text-xl font-semibold text-cream mb-2">Relationship Vision Mapping</h4>
+                            <p class="text-cream-400">Create a shared roadmap for your relationship goals</p>
+                        </div>
+                        
+                        <div class="card" style="border-color: rgba(202, 138, 4, 0.3);">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: linear-gradient(135deg, #ca8a04, #a16207); display: flex; align-items: center; justify-content: center; color: #09090b; font-weight: bold; font-size: 1.25rem; margin-bottom: 1rem;">✦</div>
+                            <h4 class="text-xl font-semibold text-cream mb-2">"Promise of the Year" Statements</h4>
+                            <p class="text-cream-400">Meaningful commitments you make to each other for the year ahead</p>
+                        </div>
+                        
+                        <div class="card" style="border-color: rgba(202, 138, 4, 0.3);">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: linear-gradient(135deg, #ca8a04, #a16207); display: flex; align-items: center; justify-content: center; color: #09090b; font-weight: bold; font-size: 1.25rem; margin-bottom: 1rem;">✦</div>
+                            <h4 class="text-xl font-semibold text-cream mb-2">Emotional Forecast Worksheet</h4>
+                            <p class="text-cream-400">Anticipate challenges and plan how you'll support each other</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bundle Offer -->
+    <section id="bundle" class="section" style="background: linear-gradient(to bottom, transparent, rgba(67, 11, 29, 0.3), transparent); overflow: hidden; position: relative;">
+        <div style="position: absolute; inset: 0; pointer-events: none;">
+            <div style="position: absolute; top: 0; left: 25%; width: 24rem; height: 24rem; background: #eab308; border-radius: 50%; opacity: 0.1; filter: blur(60px);"></div>
+            <div style="position: absolute; bottom: 0; right: 25%; width: 24rem; height: 24rem; background: #c9315b; border-radius: 50%; opacity: 0.1; filter: blur(60px);"></div>
+        </div>
+        
+        <div class="container-sm" style="position: relative; z-index: 10;">
+            <div class="text-center mb-6">
+                <div style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(to right, #c9315b, #ca8a04); border-radius: 9999px; margin-bottom: 2rem;">
+                    <span class="text-cream font-bold text-base" style="text-transform: uppercase; letter-spacing: 0.1em;">Best Value</span>
+                </div>
+                <h2 class="font-serif text-6xl mb-4 text-cream">
+                    The Holiday Special
+                </h2>
+                <div class="flex items-center justify-center gap-4 text-3xl mb-4">
+                    <span style="font-size: 1.5rem;">🎄</span>
+                    <span class="font-serif gradient-text" style="font-style: italic;">Both Rituals for $59</span>
+                    <span style="font-size: 1.5rem;">🎉</span>
+                </div>
+            </div>
+            
+            <div class="card-feature" style="background: linear-gradient(135deg, rgba(67, 11, 29, 0.6), rgba(24, 24, 27, 0.9), rgba(113, 63, 18, 0.4)); border: 4px solid rgba(202, 138, 4, 0.5); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);">
+                <div class="text-center mb-6">
+                    <div class="text-7xl font-serif gradient-text mb-2">$59</div>
+                    <div class="text-xl text-cream-300 mb-1">Save $9 when you bundle</div>
+                    <div class="text-cream-400">Holiday Edition + New Year Edition</div>
+                </div>
+                
+                <div class="card" style="border-color: rgba(202, 138, 4, 0.3); background: rgba(9, 9, 11, 0.6); padding: 2rem; margin-bottom: 2.5rem;">
+                    <h3 class="font-serif text-2xl text-gold mb-4 text-center">Exclusive Bundle Bonus:</h3>
+                    <div class="flex items-center justify-center gap-3 text-cream-200 text-lg">
+                        <span style="font-size: 1.5rem;">🎁</span>
+                        <span class="font-semibold">Free "Holiday Love Notes" PDF</span>
+                    </div>
+                    <p class="text-center text-cream-400 mt-2">52 prompts for intimate conversation throughout the year</p>
+                </div>
+                
+                <a href="#" data-product="bundle" class="btn btn-secondary" style="width: 100%; padding: 1.5rem; font-size: 1.25rem; font-weight: bold;">
+                    Get the Complete Bundle — $59
+                </a>
+                
+                <div class="flex items-center justify-center gap-6 text-sm text-cream-400" style="margin-top: 2rem;">
+                    <div class="flex items-center gap-2">
+                        <span style="color: #4ade80; font-size: 1.25rem;">✓</span>
+                        <span>Instant Access</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span style="color: #4ade80; font-size: 1.25rem;">✓</span>
+                        <span>Digital Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-5xl mb-2 text-cream">
+                    What Couples Are Saying
+                </h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="testimonial">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-cream-300 text-lg mb-4" style="font-style: italic; line-height: 1.7;">
+                        "We cried. We healed. We fell in love again."
+                    </p>
+                    <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 1rem;">
+                        <p class="text-cream-400 font-semibold">— Jasmine & Marco</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-cream-300 text-lg mb-4" style="font-style: italic; line-height: 1.7;">
+                        "Perfect for couples who haven't talked deeply in months."
+                    </p>
+                    <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 1rem;">
+                        <p class="text-cream-400 font-semibold">— Renee & Paul</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-cream-300 text-lg mb-4" style="font-style: italic; line-height: 1.7;">
+                        "It felt like a private couples retreat in our bedroom."
+                    </p>
+                    <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 1rem;">
+                        <p class="text-cream-400 font-semibold">— Ana & Luis</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-cream-300 text-lg mb-4" style="font-style: italic; line-height: 1.7;">
+                        "Finally, a way to be vulnerable without starting a fight."
+                    </p>
+                    <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 1rem;">
+                        <p class="text-cream-400 font-semibold">— David & Maria</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-cream-300 text-lg mb-4" style="font-style: italic; line-height: 1.7;">
+                        "The structure made it safe to say things I've held for years."
+                    </p>
+                    <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 1rem;">
+                        <p class="text-cream-400 font-semibold">— Keisha & James</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-cream-300 text-lg mb-4" style="font-style: italic; line-height: 1.7;">
+                        "Better than three months of couples therapy."
+                    </p>
+                    <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 1rem;">
+                        <p class="text-cream-400 font-semibold">— Sophie & Michael</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes It Different -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-5xl mb-4 text-cream">
+                    What Makes It Different?
+                </h2>
+                <p class="text-xl text-cream-300" style="max-width: 700px; margin: 0 auto;">
+                    This isn't another generic relationship course. It's a therapist-designed intimacy experience.
+                </p>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #8c1f41); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🕊️</div>
+                    <h3 class="text-2xl font-serif text-cream mb-3">Zero Pressure</h3>
+                    <p class="text-cream-400" style="line-height: 1.7;">No forcing conversation. No awkward silence. The ritual guides you gently through every moment.</p>
+                </div>
+                
+                <div class="card">
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #8c1f41); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🛡️</div>
+                    <h3 class="text-2xl font-serif text-cream mb-3">Emotional Safety</h3>
+                    <p class="text-cream-400" style="line-height: 1.7;">Structured prompts that prevent triggering while allowing vulnerability. Truth without damage.</p>
+                </div>
+                
+                <div class="card">
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #8c1f41); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">❤️</div>
+                    <h3 class="text-2xl font-serif text-cream mb-3">Heart-Centered</h3>
+                    <p class="text-cream-400" style="line-height: 1.7;">Soft voice guidance keeps you both calm, grounded, and connected to love rather than conflict.</p>
+                </div>
+                
+                <div class="card">
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #8c1f41); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🎄</div>
+                    <h3 class="text-2xl font-serif text-cream mb-3">Holiday Romance Energy</h3>
+                    <p class="text-cream-400" style="line-height: 1.7;">Taps into the warmth, nostalgia, and renewal that the holiday season naturally brings.</p>
+                </div>
+                
+                <div class="card">
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #8c1f41); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🔓</div>
+                    <h3 class="text-2xl font-serif text-cream mb-3">Works Even If One Person Is Closed</h3>
+                    <p class="text-cream-400" style="line-height: 1.7;">The gentle structure helps emotionally guarded partners open up without feeling exposed.</p>
+                </div>
+                
+                <div class="card">
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: linear-gradient(135deg, #c9315b, #8c1f41); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">👨‍⚕️</div>
+                    <h3 class="text-2xl font-serif text-cream mb-3">Therapist-Designed</h3>
+                    <p class="text-cream-400" style="line-height: 1.7;">Created by a licensed therapist specializing in couples intimacy and emotional healing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses -->
+    <section class="section">
+        <div class="container-sm">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-5xl mb-4 text-cream">
+                    Exclusive Bonuses
+                </h2>
+                <p class="text-xl text-cream-300">
+                    When you get either edition, you'll also receive:
+                </p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="card" style="padding: 2rem; display: flex; align-items: flex-start; gap: 1.5rem; border-color: rgba(202, 138, 4, 0.4);">
+                    <div style="font-size: 3rem; flex-shrink: 0;">🎁</div>
+                    <div>
+                        <h3 class="text-2xl font-serif text-gold mb-2">Bonus #1: Holiday Love Notes PDF</h3>
+                        <p class="text-cream-400" style="line-height: 1.7;">52 intimate conversation starters for deeper connection throughout the year. One for each week.</p>
+                    </div>
+                </div>
+                
+                <div class="card" style="padding: 2rem; display: flex; align-items: flex-start; gap: 1.5rem; border-color: rgba(202, 138, 4, 0.4);">
+                    <div style="font-size: 3rem; flex-shrink: 0;">🎁</div>
+                    <div>
+                        <h3 class="text-2xl font-serif text-gold mb-2">Bonus #2: "The Holiday Apology Template"</h3>
+                        <p class="text-cream-400" style="line-height: 1.7;">A structured guide for healing past hurts during the season of forgiveness and renewal.</p>
+                    </div>
+                </div>
+                
+                <div class="card" style="padding: 2rem; display: flex; align-items: flex-start; gap: 1.5rem; border-color: rgba(202, 138, 4, 0.4);">
+                    <div style="font-size: 3rem; flex-shrink: 0;">🎁</div>
+                    <div>
+                        <h3 class="text-2xl font-serif text-gold mb-2">Bonus #3: 12 Days of Intimacy Prompts</h3>
+                        <p class="text-cream-400" style="line-height: 1.7;">Daily micro-rituals to keep the connection alive from Christmas through New Year's Day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section" style="padding: 8rem 1rem; background: linear-gradient(to bottom, rgba(67, 11, 29, 0.4), rgba(67, 11, 29, 0.2), transparent);">
+        <div class="container-sm text-center">
+            <h2 class="font-serif text-5xl mb-6 text-cream" style="line-height: 1.3;">
+                This Holiday Season,<br>
+                <span class="gradient-text" style="font-style: italic;">Come Home to Each Other</span>
+            </h2>
+            
+            <p class="text-2xl text-cream-300 mb-8 font-light" style="line-height: 1.8; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Choose the ritual that's right for your relationship and start reconnecting tonight.
+            </p>
+            
+            <div class="flex flex-col gap-4 items-center mb-6" style="max-width: 500px; margin: 0 auto;">
+                <a href="#" data-product="holiday" class="btn btn-primary" style="width: 100%;">
+                    Holiday Edition — $39
+                </a>
+                
+                <a href="#" data-product="bundle" class="btn btn-secondary" style="width: 100%;">
+                    Complete Bundle — $59
+                </a>
+            </div>
+            
+            <div class="flex items-center justify-center gap-8 text-cream-400">
+                <div class="flex items-center gap-2">
+                    <span style="color: #4ade80; font-size: 1.25rem;">✓</span>
+                    <span>Instant Download</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span style="color: #4ade80; font-size: 1.25rem;">✓</span>
+                    <span>100% Satisfaction Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding: 4rem 1rem;">
+        <div class="container">
+            <div class="grid grid-3 mb-6">
+                <div>
+                    <h3 class="font-serif text-3xl gradient-text mb-3">Happy Holiday Couples™</h3>
+                    <p class="text-cream-400 text-sm" style="line-height: 1.7;">
+                        Therapist-designed intimacy rituals for couples who want deeper connection during the holidays and beyond.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-cream-200 mb-3 text-sm" style="text-transform: uppercase; letter-spacing: 0.1em;">Quick Links</h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="#holiday-edition" class="text-cream-400 text-sm" style="text-decoration: none; transition: color 0.3s;">Holiday Edition</a>
+                        <a href="#new-year-edition" class="text-cream-400 text-sm" style="text-decoration: none; transition: color 0.3s;">New Year Edition</a>
+                        <a href="#bundle" class="text-cream-400 text-sm" style="text-decoration: none; transition: color 0.3s;">Bundle Offer</a>
+                        <a href="#" class="text-cream-400 text-sm" style="text-decoration: none; transition: color 0.3s;">About Us</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-cream-200 mb-3 text-sm" style="text-transform: uppercase; letter-spacing: 0.1em;">Support</h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="#" class="text-cream-400 text-sm" style="text-decoration: none; transition: color 0.3s;">Contact</a>
+                        <a href="#" class="text-cream-400 text-sm" style="text-decoration: none; transition: color 0.3s;">Privacy Policy</a>
+                        <a href="#" class="text-cream-400 text-sm" style="text-decoration: none; transition: color 0.3s;">Terms & Conditions</a>
+                        <a href="#" class="text-cream-400 text-sm" style="text-decoration: none; transition: color 0.3s;">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid rgba(118, 29, 60, 0.5); padding-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center;">
+                <p class="text-cream-400 text-sm">
+                    Copyright © 2025 Happy Holiday Couples™. All rights reserved.
+                </p>
+                <p class="text-cream-400 text-sm">
+                    Contact: <a href="mailto:support@happyholidaycouples.com" style="color: #fde047; text-decoration: none;">support@happyholidaycouples.com</a>
+                </p>
+            </div>
+            
+            <div style="margin-top: 2rem; text-center;">
+                <p style="color: #8a7258; font-size: 0.75rem; line-height: 1.6; max-width: 900px; margin: 0 auto;">
+                    <strong>Disclaimer:</strong> Candlelight Confession™ is an intimacy enhancement tool and is not a substitute for professional therapy or medical treatment. Results may vary. If you or your partner are experiencing serious relationship distress, abuse, or mental health concerns, please seek professional help.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Configuration (edit config.js to update links) -->
+    <script src="config.js"></script>
+    
+    <!-- Smooth Scroll Script -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Fade-in on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
