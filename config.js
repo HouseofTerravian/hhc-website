@@ -3,7 +3,7 @@
 
 const config = {
   products: {
-    holidayEdition: "https://payhip.com/b/YOUR_HOLIDAY_EDITION_ID",
+    holidayEdition: "https://payhip.com/b/68M2m",
     newYearEdition: "https://payhip.com/b/YOUR_NEWYEAR_EDITION_ID",
     bundle: "https://payhip.com/b/YOUR_BUNDLE_ID"
   },
